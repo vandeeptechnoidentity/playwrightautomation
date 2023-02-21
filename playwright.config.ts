@@ -12,7 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests/',
   /* Maximum time one test can run for. */
-  timeout: 50 * 1000,
+  timeout: 1 * 50 * 1000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
@@ -29,23 +29,29 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: process.env.CI ? [["junit", {
+    outputFile: "results.xml"
+  }]] : [["json", {
+    outputFile: "report.json"
+  }], ["html", {
+    open: "on-failure"
+  }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
     actionTimeout: 0,
-    headless: false,
-    screenshot: "on",
-    video: "on",
+    headless: process.env.CI ? true : false,
+     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    trace: process.env.CI ? "off" : "on",
+    video: process.env.CI ? "off" : "on",
+    screenshot: process.env.CI ? "off" : "on",
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://hctra-dashboard.devti.in:8050',
     extraHTTPHeaders: {
       // We set this header per GitHub guidelines.
       'Content-Type': 'application/json',
     },
-
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
   },
   globalSetup:"utils/globalSetup.ts",
 
