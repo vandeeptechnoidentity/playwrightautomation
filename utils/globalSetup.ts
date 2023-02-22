@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 
 async function globalSetup(config: FullConfig) {
 
-const test_env = process.env.test_env || "dev"
+const test_env = process.env.test_env || "stage"
     if (test_env) {
         dotenv.config({
             path: `environmentData/.env.${test_env}`,
