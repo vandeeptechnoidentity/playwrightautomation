@@ -10,6 +10,7 @@ export async function login(page) {
   await page.locator('input[name="email"]').fill(ENV.USERNAME);  
   await page.locator('input[name="password"]').fill(ENV.PASSWORD);  
   await page.locator('//button[@type="submit"]').click();
+  await page.waitForSelector("//span[contains(text(),'Portal')]");
   const portalText = await  (page.locator("//span[contains(text(),'Portal')]")).textContent();
   console.log(portalText);
   
