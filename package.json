@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "npx playwright install",
     "env:dev": "cross-env test_env=dev npx playwright test",
-    "env:stage": "cross-env test_env=stage npx playwright test ./tests/ui/selfseaAdmin.spec.ts"
+    "env:stage": "cross-env test_env=stage npx playwright test ./tests/ui --workers=1"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "dotenv": "^16.0.3",
     "install": "^0.13.0",
     "npm": "^9.5.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
   }
 }
