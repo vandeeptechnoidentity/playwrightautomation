@@ -6,7 +6,6 @@ test.beforeEach(async ({ page }) => {
   login(page);
 });
 
-
 test.describe('Verify', () => {
   test('Transactions History', async ({ page }) => {
     await expect(page.locator('a[href="#menu"]')).toBeVisible();
