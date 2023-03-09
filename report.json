@@ -1,0 +1,112 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "D:\\myGit_HCTRA\\playwrightautomation\\utils\\globalSetup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/myGit_HCTRA/playwrightautomation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "chromium",
+        "testDir": "D:/myGit_HCTRA/playwrightautomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 50000
+      }
+    ],
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "on-failure"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "D:\\myGit_HCTRA\\playwrightautomation\\playwright.config.ts",
+    "rootDir": "D:/myGit_HCTRA/playwrightautomation/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.31.2",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ui\\newUserDashboard.spec.ts",
+      "file": "ui/newUserDashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "verifying userdashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 11037,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-03T05:41:24.848Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\trace.zip"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ebdd8572105e24b25add-35588940e4228564186b",
+          "file": "ui/newUserDashboard.spec.ts",
+          "line": 8,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
