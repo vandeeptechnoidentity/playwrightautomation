@@ -51,62 +51,11 @@
     "workers": 4,
     "webServer": null
   },
-  "suites": [
+  "suites": [],
+  "errors": [
     {
-      "title": "ui\\newUserDashboard.spec.ts",
-      "file": "ui/newUserDashboard.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "verifying userdashboard",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 0,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 11037,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-03-03T05:41:24.848Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\trace.zip"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\myGit_HCTRA\\playwrightautomation\\test-results\\ui-newUserDashboard-verifying-userdashboard-chromium\\test-finished-1.png"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "ebdd8572105e24b25add-35588940e4228564186b",
-          "file": "ui/newUserDashboard.spec.ts",
-          "line": 8,
-          "column": 5
-        }
-      ]
+      "message": "No tests found",
+      "stack": "Error: No tests found"
     }
-  ],
-  "errors": []
+  ]
 }
